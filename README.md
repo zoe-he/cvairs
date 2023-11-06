@@ -6,3 +6,11 @@ Credit valuation adjustment (CVA) for interest rate swap (IRS):
 * Simulate swap market‑to‑market values estimate expected and potential future exposures of a counterparty entering an IRS.
 * Interpolate a credit curve using cubic spline to calculate probabilities of default.
 * Calculate a CVA for a counterparty entering an IRS.
+
+## Roadmap
+
+* [ ] Reorganize repository as package.
+* [ ] Add test data and sample script.
+* [ ] Add sample Jupyter notebook.
+* [ ] Utilize scientific libraries over standard library, e.g., NumPy, SciPy, Matplotlib, and pandas.
+* [ ] Add database support via SQLAlchemy with SQLite sample.

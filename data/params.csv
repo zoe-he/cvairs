@@ -1,0 +1,21 @@
+Param,Value
+mu,0.05
+kappa,0.1
+sigma,0.01
+r0,0.05
+Nmb Scens,1000
+dt (in years),0.25
+t term (in years),10
+dtau (in years),0.25
+tau term (in years),10
+Swap rate s,0.05
+PFE Conf Level (k),0.975
+LGD,0.6
+Credit Curve (CDS),
+Time (years),Given Credit Curve ( Spread in bps)
+0,0
+1,200
+3,221
+5,244
+7,270
+10,314

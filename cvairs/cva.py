@@ -39,17 +39,3 @@ class CVA:
                 if i < n:
                     row.extend(cva_values[i])
                 writer.writerow(row)
-
-
-def _params_from_csv(file):
-    with open(file, newline='') as params_file:
-        reader = csv.reader(params_file)
-        next(reader)  # Skip main params header.
-        params = []  # [Value: float]
-        for row in reader:
-            if not row[1]:
-                break
-            params.append(float(row[1]))
-        next(reader)  # Skip credit curve header.
-        credit_curve = [(float(row[0]), float(row[1])) for row in reader]  # [(Time: years, Credit spread: bps)]
-        return params, credit_curve

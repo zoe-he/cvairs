@@ -11,6 +11,6 @@ Credit valuation adjustment (CVA) for interest rate swap (IRS):
 
 * [x] Reorganize repository as package.
 * [x] Add test data and sample script.
-* [ ] Add sample Jupyter notebook.
+* [x] Add sample Jupyter notebook.
 * [ ] Utilize scientific libraries over standard library, e.g., NumPy, SciPy, Matplotlib, and pandas.
 * [ ] Add database support via SQLAlchemy with SQLite sample.

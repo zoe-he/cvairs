@@ -1,13 +1,13 @@
 import csv
+import random
 import statistics
 from math import exp, sqrt
-from random import random
 
 
 class VasicekModel:
     """Vašíček model (discrete)"""
 
-    def __init__(self, mu, kappa, sigma, r0, N, dt, T, dtau, Tau):
+    def __init__(self, mu, kappa, sigma, r0, N, dt, T, dtau, Tau, seed=777):
         self.mu = mu
         self.kappa = kappa
         self.sigma = sigma
@@ -24,8 +24,11 @@ class VasicekModel:
         self.tau = [j * dtau for j in range(self.J + 1)]
 
         sample_size = self.N * self.I
-        snd = statistics.NormalDist()  # Standard normal distribution (mu=0.0, sigma=1.0).
-        self.omega = [snd.inv_cdf(random()) for _ in range(sample_size)]  # Calculate samples with inverse CDF.
+        random.seed(seed)
+        # Standard normal distribution (mu=0.0, sigma=1.0).
+        snd = statistics.NormalDist()
+        # Calculate samples with inverse CDF.
+        self.omega = [snd.inv_cdf(random.random()) for _ in range(sample_size)]
 
     def to_csv(self, file, rates=None, prices=None):
         if rates is None or prices is None:
